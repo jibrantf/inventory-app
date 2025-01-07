@@ -1,0 +1,209 @@
+/* src/app/globals.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-black; /* Ganti dengan warna latar belakang yang diinginkan */
+  @apply antialiased;
+  transition: none !important;
+  animation: none !important;
+}
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+.custom-width {
+  max-width: 700px; /* atau lebar yang Anda inginkan */
+  width: 100%; /* agar responsif */
+  margin: 0 20px;
+}
+
+.table-shadow {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+.calendar-small {
+  width: 180px; /* Lebar yang lebih kecil */
+  height: auto; /* Tinggi otomatis untuk menjaga proporsi */
+  transform: scale(0.7); /* Mengurangi skala lebih lanjut */
+  transform-origin: top right; /* Pastikan kalender tetap berada di kanan atas */
+}
+
+* {
+  transition: none !important;
+  animation: none !important;
+}
+/* CSS untuk menampilkan teks yang terpotong */
+.ellipsis {
+  white-space: nowrap; /* Tidak membiarkan teks pindah baris */
+  overflow: hidden;    /* Menyembunyikan teks yang melampaui batas */
+  text-overflow: ellipsis; /* Menampilkan titik-titik */
+}
+/* Menambahkan scrollbar lebih kecil */
+::-webkit-scrollbar {
+  width: 4px; /* Ukuran scrollbar lebih kecil */
+  height: 4px; /* Jika ingin scrollbar horizontal juga lebih kecil */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5); /* Warna scrollbar */
+  border-radius: 10px; /* Menambahkan radius pada scrollbar untuk tampilan lebih halus */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Warna track scrollbar */
+  border-radius: 10px;
+}
+
+/* Kalender */
+.react-calendar {
+  font-size: 0.8rem !important; /* Ukuran font kalender */
+  max-width: 100% !important;  /* Pastikan kalender tidak melebihi lebar kontainer */
+  box-sizing: border-box; /* Menghindari elemen keluar dari kontainer */
+  overflow: hidden; /* Menyembunyikan elemen yang keluar dari batas */
+}
+
+/* Mengatur lebar kalender dengan kelas custom */
+.custom-calendar {
+  width: 100%;
+  max-width: 100% !important; /* Pastikan lebar kalender sesuai dengan kontainer */
+  margin: 0 auto; /* Menjaga kalender tetap di tengah */
+  box-sizing: border-box; /* Menjaga ukuran sesuai dengan kontainer */
+  overflow: hidden; 
+}
+
+@media (max-width: 768px) {
+  .custom-calendar {
+    max-width: 90% !important; 
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-calendar {
+    max-width: 80% !important; 
+  }
+  .react-calendar {
+    font-size: 0.7rem !important; 
+  }
+}
+
+/* Mengatur elemen tile kalender agar lebih kompak */
+.react-calendar__tile {
+  font-size: 0.7rem !important; /* Mengurangi ukuran font pada setiap tile */
+  padding: 8px !important; /* Mengurangi padding untuk tampilan yang lebih rapat */
+}
+
+@media (max-width: 640px) {
+  .modal-content {
+    width: 90%; 
+    height: auto; 
+  }
+  iframe {
+    height: 70vh;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Untuk menghapus scroll pada body */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Non-scroll hanya untuk halaman auth */
+.auth-page {
+  overflow: hidden; /* Hilangkan scroll */
+}
+
+/* Scroll normal untuk halaman lainnya */
+.normal-page {
+  overflow-y: auto; /* Scroll hanya vertikal */
+  overflow-x: hidden; /* Sembunyikan scroll horizontal */
+}
+
+/* Tambahkan efek fade-in pada elemen */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.loader {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #000;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+.tooltip {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+li:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
