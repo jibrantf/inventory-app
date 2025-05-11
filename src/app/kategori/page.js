@@ -216,8 +216,8 @@ const Kategori = () => {
     </tr>
   </thead>
   <tbody>
-  {currentItems.length > 0 ? (
-                currentItems.map((kategori, index) => (
+      {currentItems.length > 0 ? (
+        currentItems.map((kategori, index) => (
       <tr key={kategori.id_kategori} className="bg-slate-200 hover:bg-slate-300 text-gray-900">
         <td className="py-2 px-4 border-b border-gray-300 text-center">{kategori.nama_kategori}</td>
         { (userRole === "superuser" || userRole === "atasan") && (

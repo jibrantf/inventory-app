@@ -53,7 +53,6 @@ export default function LoginPage() {
     return (
         <div className="relative flex justify-center items-center min-h-screen w-screen bg-gray-100 overflow-hidden">
             <div className="absolute top-[-20vh] right-[-30vw] w-[60vw] h-[120vh] bg-custom24 rounded-tl-full rounded-tr-full rounded-br-none shadow-lg z-0"></div>
-    
                 <div className="relative w-full max-w-md z-10">
                 <div className="absolute inset-0 bg-slate-400 rounded-lg shadow-lg transform translate-x-2 translate-y-2"></div>
                 <div className="absolute inset-0 bg-white rounded-lg shadow-md"></div>
@@ -121,6 +120,6 @@ export default function LoginPage() {
                 </div>
             </div>
         </div>
-        </div>
+     </div>
     );
 }    

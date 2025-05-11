@@ -160,19 +160,18 @@ const barChartOptionsMaintenanceCategories = {
           </div>
         </div>
 
-        {/* KOTAK Chart 2 */}
        {/* KOTAK Chart 2 */}
-<div className="bg-white p-1 rounded-lg h-64">
-  <div className="bg-white p-6 rounded-lg h-full flex flex-col justify-between">
-    <h2 className="text-lg font-semibold mb-2 flex items-center">
-      <FaChartSimple className="mr-2" /> {/* Ikon di sebelah kiri teks */}
-      Maintenance Device
-    </h2>
-    <div className="flex-grow flex items-center justify-center">
-      <Bar data={maintenanceCategoriesData} options={barChartOptionsMaintenanceCategories} />
-    </div>
-  </div>
-</div>
+        <div className="bg-white p-1 rounded-lg h-64">
+          <div className="bg-white p-6 rounded-lg h-full flex flex-col justify-between">
+            <h2 className="text-lg font-semibold mb-2 flex items-center">
+              <FaChartSimple className="mr-2" /> {/* Ikon di sebelah kiri teks */}
+              Maintenance Device
+            </h2>
+            <div className="flex-grow flex items-center justify-center">
+              <Bar data={maintenanceCategoriesData} options={barChartOptionsMaintenanceCategories} />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
